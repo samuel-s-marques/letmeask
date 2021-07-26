@@ -3,12 +3,12 @@ import { useParams } from 'react-router-dom'
 
 import logoImg from '../assets/images/logo.svg'
 import emptyQuestions from '../assets/images/empty-questions.svg'
-import { Button } from '../components/Button/Button'
-import { RoomCode } from '../components/RoomCode/RoomCode'
+import { Button } from '../components/Button'
+import { RoomCode } from '../components/RoomCode'
 import { useAuth } from '../hooks/useAuth'
 import { database } from '../services/firebase'
 import '../styles/room.scss'
-import { Question } from '../components/Question/Question'
+import { Question } from '../components/Question'
 import { useRoom } from '../hooks/useRoom'
 
 type RoomParams = {

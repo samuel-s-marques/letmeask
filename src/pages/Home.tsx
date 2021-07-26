@@ -7,7 +7,7 @@ import googleIconImg from '../assets/images/google-icon.svg'
 import loginImg from '../assets/images/log-in.svg'
 
 import '../styles/auth.scss'
-import { Button } from '../components/Button/Button'
+import { Button } from '../components/Button'
 import { useAuth } from '../hooks/useAuth'
 import { database } from '../services/firebase'
 import toast, { Toaster } from 'react-hot-toast'
