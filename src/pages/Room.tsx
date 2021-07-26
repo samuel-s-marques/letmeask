@@ -1,5 +1,5 @@
 import { FormEvent, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom'
 
 import logoImg from '../assets/images/logo.svg'
 import emptyQuestions from '../assets/images/empty-questions.svg'
@@ -16,7 +16,8 @@ type RoomParams = {
 }
 
 export function Room() {
-	const { user } = useAuth()
+	const { user, signInWithGoogle } = useAuth()
+	const history = useHistory()
 	const params = useParams<RoomParams>()
 	const roomId = params.id
 	const [newQuestion, setNewQuestion] = useState('')
@@ -56,6 +57,13 @@ export function Room() {
 		setNewQuestion('')
 	}
 
+	async function signIn() {
+		if (!user)
+			await signInWithGoogle()
+
+		history.push(`/rooms/${roomId}`)
+	}
+
 	return (
 		<div id="page-room">
 			<header>
@@ -86,7 +94,7 @@ export function Room() {
 									<span>{user.name}</span>
 								</div>
 							) : (
-								<span>Para enviar uma pergunta, <button>faça seu login</button>.</span>
+								<span>Para enviar uma pergunta, <button onClick={signIn}>faça seu login</button>.</span>
 							)
 						}
 						
