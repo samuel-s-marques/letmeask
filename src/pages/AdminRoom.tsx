@@ -4,6 +4,7 @@ import logoImg from '../assets/images/logo.svg'
 import deleteImg from '../assets/images/delete.svg'
 import checkImg from '../assets/images/check.svg'
 import answerImg from '../assets/images/answer.svg'
+import emptyQuestions from '../assets/images/empty-questions.svg'
 
 import { Button } from '../components/Button'
 import { RoomCode } from '../components/RoomCode'
@@ -109,6 +110,16 @@ export function AdminRoom() {
 						})
 					}
 				</div>
+
+				{
+					questions.length === 0 ? (
+						<div className="no-questions">
+							<img src={emptyQuestions} alt="Não há perguntas" />
+							<h2 className="title">Nenhuma pergunta por aqui...</h2>
+							<p className="subtitle">Envie o código desta sala para seus amigos e comece a responder perguntas!</p>
+						</div>
+					) : null
+				}
 			</main>
 		</div>
 	)
