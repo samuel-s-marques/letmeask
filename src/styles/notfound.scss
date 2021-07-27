@@ -1,0 +1,31 @@
+#main {
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	height: 100vh;
+
+	h1 {
+		font-size: calc(1.375rem + 1.5vw);
+		margin-top: 0;
+		margin-bottom: 0.5rem;
+		font-weight: 500;
+		line-height: 1.2;
+	}
+
+	#middle {
+		h2 {
+			padding-left: 10px;
+			font-size: 1.25rem;
+			font-weight: 300;
+		}
+
+		a {
+			text-decoration: none;
+			color: #0D6EFD;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
