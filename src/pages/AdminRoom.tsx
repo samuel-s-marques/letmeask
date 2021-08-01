@@ -12,6 +12,7 @@ import '../styles/room.scss'
 import '../styles/modal.scss'
 import { Question } from '../components/Question'
 import { useRoom } from '../hooks/useRoom'
+import { useAuth } from '../hooks/useAuth'
 
 type RoomParams = {
 	id: string;
@@ -19,6 +20,7 @@ type RoomParams = {
 
 export function AdminRoom() {
 	const params = useParams<RoomParams>()
+	const { user, signInWithGoogle } = useAuth()
 	const roomId = params.id
 	const { questions, title } = useRoom(roomId)
 	const history = useHistory()
@@ -27,11 +29,17 @@ export function AdminRoom() {
 	const [questionId, setQuestionId ] = useState('')
 
 	async function handleDeleteQuestion(questionId: string){
+		if (!user) 
+			await signInWithGoogle()
+
 		await database.ref(`rooms/${roomId}/questions/${questionId}`).remove()
 		setIsDeleteQuestionModalOpen(false)
 	}
 
 	async function handleEndRoom() {
+		if (!user) 
+			await signInWithGoogle()
+
 		await database.ref(`rooms/${roomId}`).update({
 			endedAt: new Date()
 		})
@@ -40,12 +48,18 @@ export function AdminRoom() {
 	}
 
 	async function handleCheckQuestion(questionId: string) {
+		if (!user) 
+			await signInWithGoogle()
+
 		await database.ref(`rooms/${roomId}/questions/${questionId}`).update({
 			isAnswered: true
 		})
 	}
 
 	async function handleAnswerQuestion(questionId: string) {
+		if (!user) 
+			await signInWithGoogle()
+
 		await database.ref(`rooms/${roomId}/questions/${questionId}`).update({
 			isHighlighted: true
 		})
