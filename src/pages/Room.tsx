@@ -24,9 +24,8 @@ export function Room() {
 	const { questions, title } = useRoom(roomId)
 
 	async function handleLikeQuestion(questionId: string, likeId: string | undefined) {
-		if (!user) {
+		if (!user) 
 			await signInWithGoogle()
-		}
 
 		if (likeId) {
 			await database.ref(`rooms/${roomId}/questions/${questionId}/likes/${likeId}`).remove()
