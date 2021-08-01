@@ -1,0 +1,160 @@
+.excludeModal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.excludeModal svg {
+  margin-top: 50px;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1.5rem;
+}
+
+.excludeModal svg path {
+  stroke: #d73754;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 760px) {
+  .excludeModal svg {
+    margin-top: 25px;
+  }
+}
+
+.excludeModal h2 {
+  font: 700 24px "Poppins", sans-serif;
+  color: #29292e;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.excludeModal p {
+  font: 400 1rem "Roboto", sans-serif;
+  color: #737380;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.excludeModal div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 760px) {
+  .excludeModal div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.excludeModal div #cancelar {
+  background: #DBDCDD;
+  border-radius: 8px;
+  color: #737380;
+}
+
+.excludeModal div #encerrar {
+  background: #E73F5D;
+  border-radius: 8px;
+  color: white;
+}
+
+.excludeModal div button {
+  padding: 0.875rem 2rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  -webkit-transition: -webkit-filter .2s;
+  transition: -webkit-filter .2s;
+  transition: filter .2s;
+  transition: filter .2s, -webkit-filter .2s;
+}
+
+@media (max-width: 760px) {
+  .excludeModal div button {
+    width: 100%;
+  }
+}
+
+.excludeModal div button:hover {
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
+.excludeModal div button:first-child {
+  background: var(--gray-light);
+  color: var(--gray-dark);
+}
+
+.excludeModal div button:last-child {
+  background: var(--red);
+  color: var(--white);
+}
+
+.Modal {
+  position: absolute;
+  inset: 40px;
+  border: 1px solid #cccccc;
+  background: #f8f8f8 none repeat scroll 0% 0%;
+  overflow: auto;
+  border-radius: 8px;
+  outline: currentcolor none medium;
+  padding: 20px;
+  height: 362px;
+  width: 590px;
+  margin: auto;
+}
+
+@media (max-width: 760px) {
+  .Modal {
+    height: 400px;
+    width: 470px;
+  }
+}
+
+@media (max-width: 660px) {
+  .Modal {
+    height: 400px;
+    width: 340px;
+  }
+}
+
+@media (max-width: 400px) {
+  .Modal {
+    height: 400px;
+    width: 290px;
+  }
+}
+
+@media (max-height: 500px) {
+  .Modal {
+    height: 350px;
+    width: 530px;
+  }
+}
+/*# sourceMappingURL=modal.css.map */
