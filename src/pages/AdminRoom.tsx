@@ -136,15 +136,9 @@ export function AdminRoom() {
 						position: 'fixed',
 						inset: 0,
 						backgroundColor: 'rgba(5, 2, 6, 0.8)',
-					},
-					content: {
-						height: '362px',
-						width: '590px',
-						borderRadius: '8px',
-						margin: 'auto',
-						backgroundColor: '#F8F8F8'
 					}
 				}}
+				className="Modal"
 			>
 				<div className="excludeModal">
 					<svg
