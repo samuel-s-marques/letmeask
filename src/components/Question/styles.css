@@ -112,4 +112,20 @@
   -webkit-filter: brightness(0.5);
           filter: brightness(0.5);
 }
+
+.question footer button.delete-button:hover svg path {
+  stroke: #d73754;
+}
+
+.question footer button.answer-button:hover svg path {
+  stroke: #835afd;
+}
+
+.question footer button.check-button:hover svg circle {
+  stroke: #835afd;
+}
+
+.question footer button.check-button:hover svg path {
+  stroke: #835afd;
+}
 /*# sourceMappingURL=styles.css.map */

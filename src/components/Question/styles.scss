@@ -86,6 +86,33 @@
 					filter: brightness(0.5)
 				}
 			}
+
+			&.delete-button {
+				&:hover {
+					svg path {
+						stroke: #d73754;
+					}
+				}
+			}
+
+			&.answer-button {
+				&:hover {
+					svg path {
+						stroke: #835afd;
+					}
+				}
+			}
+			
+			&.check-button {
+				&:hover {
+					svg circle {
+						stroke: #835afd;
+					}
+					svg path {
+						stroke: #835afd;
+					}
+				}
+			}
 		}
 	}
 }
